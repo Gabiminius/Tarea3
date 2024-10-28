@@ -5,7 +5,8 @@ package Logica;
  * Extiende la clase abstracta {@code Moneda} e implementa el método {@code getValor}.
  */
 public class Moneda100 extends Moneda {
-    public Moneda100() {
+    public Moneda100(int serie) {
+        super(serie);
     }
 
     /**

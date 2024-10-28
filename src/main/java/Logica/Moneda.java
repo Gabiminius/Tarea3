@@ -6,14 +6,21 @@ package Logica;
  * comparación entre diferentes monedas
  */
 public abstract class Moneda implements Comparable<Moneda> {
-
-    public Moneda() {
+protected int serie;
+    public Moneda(int serie) {
+        this.serie=serie;
     }
 
     /**
      * @return el valor de la moneda
      */
     public abstract int getValor();
+    /**
+     * @return el numero de serie de la moneda
+     */
+    public int getSerie(){
+        return serie;
+    }
 
     /**
      * Compara esta moneda con otra moneda.
