@@ -1,4 +1,8 @@
-package Logica; /**
+package Logica;
+
+import java.util.ArrayList;
+
+/**
  * @author Gabriela Escalona
  * @author Valentina Serón
  * @version version 2, 03 de octubre 2024
@@ -8,6 +12,7 @@ package Logica; /**
 class Comprador {
     private String sonido;
     private int vuelto = 0;
+    private ArrayList<Moneda> monedas = new ArrayList<>();
 
     /**
      * Comprador representará a un comprador que cuenta con una moneda para pagar, una  elección de producto y un expendedor donde realizará su compra
@@ -18,8 +23,9 @@ class Comprador {
      * @throws PagoInsuficienteException En caso que la moneda sea insuficiente para pagar el producto deseado.
      * @throws PagoIncorrectoException En caso que la moneda no se haya instanciado correctamente.
      */
-    public Comprador(Moneda m, int cualProducto, Expendedor exp) throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
-        Producto b1 = exp.comprarProducto(m, cualProducto);
+    public Comprador(Moneda m, Seleccionador cualProducto, Expendedor exp) throws NoHayProductoException, PagoInsuficienteException, PagoIncorrectoException {
+        exp.comprarProducto(m, cualProducto);
+        Producto p= exp.getProducto();
         /**
          * Este ciclo se utilizará para que el comprador pueda retirar su vuelto
          */
@@ -29,11 +35,12 @@ class Comprador {
                 break;
             } else {
                 vuelto += a.getValor();
+                monedas.add(a);
             }
         }
 
-        if (b1 != null) {
-            sonido = b1.consumir();
+        if (p != null) {
+            sonido = p.consumir();
         }else{
             sonido = null;
         }
@@ -45,6 +52,10 @@ class Comprador {
      */
     public int cuantoVuelto(){
         return vuelto;
+    }
+
+    public ArrayList<Moneda> getMonedasVuelto(){
+        return monedas;
     }
 
     /**

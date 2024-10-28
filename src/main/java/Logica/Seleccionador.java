@@ -6,44 +6,57 @@ package Logica;
  * de posición y un precio asociado.
  */
 public enum Seleccionador {
-    COCACOLA(1, 1000),
-    SPRITE(2, 1000),
-    FANTA(3, 1000),
-    SNICKERS(4, 800),
-    SUPER8(5, 300);
-
-    private final int num;
+    COCACOLA(1200){
+        @Override
+        public Producto crearProducto(int serie){
+            return new Cocacola(serie);
+        }
+    },
+    FANTA(1200){
+        @Override
+        public Producto crearProducto(int serie){
+            return new Fanta(serie);
+        }
+    },
+    SPRITE(1200){
+        @Override
+        public Producto crearProducto(int serie){
+            return new Sprite(serie);
+        }
+    },
+    SNICKERS(1500){
+        @Override
+        public Producto crearProducto(int serie){
+            return new Snickers(serie);
+        }
+    },
+    SUPER8(300){
+        @Override
+        public Producto crearProducto(int serie){
+            return new Super8(serie);
+        }
+    };
     private final int precio;
-
     /**
-     * @param num el número de posición del producto
-     * @param precio el precio del producto
+     * Constructor de la clase Selector
+     * @param precio Precio del producto
      */
-    Seleccionador(int num, int precio) {
-        this.num = num;
+    Seleccionador(int precio){
         this.precio = precio;
     }
-
     /**
-     * @return el número de posición
+     * Método que regresa el precio de un producto.
+     * @return Retorna el precio de un producto
      */
-    public int getPosicion() {
-        return num;
-    }
-
-    /**
-     * @return el precio del producto
-     */
-    public int getPrecio() {
+    public int getprecio(){
         return precio;
     }
-    public static Seleccionador fromPosicion(int posicion){
-        for(Seleccionador producto : Seleccionador.values() ){
-            if(producto.getPosicion() == posicion){
-                return producto;
-            }
-        }
-        return null;
-    }
+
+    /**
+     * Método que crea un producto.
+     * @param serie Número de serie del producto.
+     * @return Retorna un producto
+     */
+    public abstract Producto crearProducto(int serie);
 
 }

@@ -30,5 +30,20 @@ public class Deposito<T> {
         }
         return productos.remove(0);
     }
+    /**
+     * Método que devuelve si el depósito está vacío.
+     * @return True si el depósito está vacío, false en caso contrario.
+     */
+    public boolean isEmpty(){
+        return productos.isEmpty();
+    }
+
+    /**
+     * Método que devuelve el número de objetos almacenados en el depósito.
+     * @return Número de objetos almacenados.
+     */
+    public int size() {
+        return productos.size();
+    }
 }
 
