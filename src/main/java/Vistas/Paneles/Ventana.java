@@ -1,25 +1,25 @@
 package Vistas;
+import Vistas.Imagens.*;
+import Vistas.Paneles.*;
+import Vistas.botones.*;
+
 import javax.swing.*;
 
 
 
 public class Ventana extends JFrame {
-    private PanelPrincipal panelPrincipal=new PanelPrincipal();
+    private Vistas.PanelPrincipal panelPrincipal = new Vistas.PanelPrincipal();
     public Ventana() {
         add(panelPrincipal);
-        pack(); // Ajustar el tamaño de la ventana al tamaño preferido de sus componentes
         this.setTitle("Expendedor");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(500,500);
+        this.setSize(500, 500);  // Establecer el tamaño de la ventana
         this.setVisible(true);
     }
 
     public static void main(String[] args) {
-        Ventana ventana= new Ventana();
+        new Ventana();
     }
-
-
-
 }
 
 
