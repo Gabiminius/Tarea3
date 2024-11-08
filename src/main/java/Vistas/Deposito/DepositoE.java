@@ -13,9 +13,10 @@ public class DepositoE extends JPanel implements MouseListener {
     private ImageIcon icon;
 
     public DepositoE(){
-        this.setPreferredSize(new Dimension(130, 150));
+        this.setPreferredSize(new Dimension(105, 150));
         this.addMouseListener(this);
         this.setBackground(Color.black);
+
 
         setIcon();
     }
@@ -42,7 +43,7 @@ public class DepositoE extends JPanel implements MouseListener {
         //analizar que consiumio el comprador
         super.paintComponent(g);
         if(icon != null) {
-            g.drawImage(icon.getImage(), 0, 0,getWidth(), getHeight(), this);
+            g.drawImage(icon.getImage(), 20, 0,getWidth(), getHeight(), this);
         }
     }
 
