@@ -30,6 +30,8 @@ public class Boton500 extends JRadioButton implements MouseListener {
         this.setSelectedIcon(iconSeleccionado);
         this.panelMonedero = panelMonedero;
         this.addMouseListener(this);
+        setBackground(Color.WHITE);
+
     }
 
     /**
