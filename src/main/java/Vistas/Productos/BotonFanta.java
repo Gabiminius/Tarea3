@@ -7,13 +7,20 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URL;
-
+/**
+ * La clase {@code BotonFanta} representa un botón de radio para seleccionar una bebida fanta,
+ * mostrando su precio y cambiando de icono cuando está seleccionado.
+ * Implementa {@link MouseListener} para manejar eventos de clic en el botón.
+ */
 public class BotonFanta extends JRadioButton implements MouseListener{
     private PanelSeleccionar panelSelect;
 
-    /**
-     * Constructor de la clase JButtonFanta.
-     * @param panelSelect panel de selección.
+     /**
+     * Constructor de la clase {@code BotonFanta}.
+     * Configura el botón con un texto de precio, iconos personalizados para los estados normal y
+     * seleccionado, y asocia el botón al panel de selección especificado.
+     *
+     * @param panelSelect el panel de tipo {@code PanelSeleccionar} al que se asociará este botón.
      */
     public  BotonFanta(PanelSeleccionar panelSelect) {
         super("Precio: $1000");

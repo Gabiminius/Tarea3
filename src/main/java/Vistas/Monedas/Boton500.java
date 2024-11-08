@@ -7,14 +7,20 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URL;
 import Vistas.*;
-
+/**
+ * La clase {@code Boton500} representa un botón de radio que simula una moneda de 500.
+ * Implementa {@link MouseListener} para manejar eventos de clic en el botón.
+ */
 public class Boton500 extends JRadioButton implements MouseListener {
     private PanelMonedero panelMonedero;
     private int contador = 423;
 
     /**
-     * Constructor de la clase Boton500.
-     * @param panelMonedero panel de la billetera.
+     * Constructor de la clase {@code Boton500}.
+     * Configura el botón con iconos personalizados para el estado normal y seleccionado, y
+     * asocia el botón al panel del monedero especificado.
+     *
+     * @param panelMonedero el panel de tipo {@code PanelMonedero} al que se asociará este botón.
      */
     public Boton500(PanelMonedero panelMonedero) {
         super();

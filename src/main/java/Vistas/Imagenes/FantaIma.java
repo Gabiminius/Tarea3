@@ -4,6 +4,10 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
+/**
+ * La clase {@code FantaIma} representa un componente gráfico que muestra una imagen de una FANTA.
+ * Extiende {@link JPanel} y se encarga de cargar y escalar la imagen.
+ */
 
 public class FantaIma extends JPanel {
     private Image imagen;

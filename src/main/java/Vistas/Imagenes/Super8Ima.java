@@ -4,7 +4,10 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
-
+/**
+ * La clase {@code Super8Ima} representa un componente gráfico que muestra una imagen de un Super8.
+ * Extiende {@link JPanel} y se encarga de cargar y escalar la imagen.
+ */
 public class Super8Ima extends JPanel {
     private Image imagen;
     /**

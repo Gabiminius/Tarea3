@@ -4,6 +4,10 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
+/**
+ * La clase {@code CocacolaIma} representa un componente gráfico que muestra una imagen de una Coca-Cola.
+ * Extiende {@link JPanel} y se encarga de cargar y escalar la imagen.
+ */
 
 public class CocacolaIma extends JPanel {
     private Image imagen;

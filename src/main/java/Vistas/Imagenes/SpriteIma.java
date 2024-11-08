@@ -4,7 +4,10 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.net.URL;
-
+/**
+ * La clase {@code SpriteIma} representa un componente gráfico que muestra una imagen de una Sprite.
+ * Extiende {@link JPanel} y se encarga de cargar y escalar la imagen.
+ */
 public class SpriteIma extends JPanel {
     private Image imagen;
     /**

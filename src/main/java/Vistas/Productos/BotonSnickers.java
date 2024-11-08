@@ -7,13 +7,20 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URL;
-
+/**
+ * La clase {@code BotonSnickers} representa un botón de radio para seleccionar un Snicker,
+ * mostrando su precio y cambiando de icono cuando está seleccionado.
+ * Implementa {@link MouseListener} para manejar eventos de clic en el botón.
+ */
 public class BotonSnickers extends JRadioButton implements MouseListener{
     private PanelSeleccionar panelSelect;
 
     /**
-     * Constructor de la clase JButtonSnickers.
-     * @param panelSelect panel de selección.
+     * Constructor de la clase {@code BotonSnickers}.
+     * Configura el botón con un texto de precio, iconos personalizados para los estados normal y
+     * seleccionado, y asocia el botón al panel de selección especificado.
+     *
+     * @param panelSelect el panel de tipo {@code PanelSeleccionar} al que se asociará este botón.
      */
     public BotonSnickers(PanelSeleccionar panelSelect) {
         super("Precio: $500");

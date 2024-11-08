@@ -7,12 +7,19 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URL;
-
+/**
+ * La clase {@code BotonCocacola} representa un botón de radio para seleccionar una bebida Coca-Cola,
+ * mostrando su precio y cambiando de icono cuando está seleccionado.
+ * Implementa {@link MouseListener} para manejar eventos de clic en el botón.
+ */
 public class BotonCocacola extends JRadioButton implements MouseListener{
     private PanelSeleccionar panelSelect;
     /**
-     * Constructor de la clase JButtonCoca.
-     * @param panelSelect panel de selección.
+     * Constructor de la clase {@code BotonCocacola}.
+     * Configura el botón con un texto de precio, iconos personalizados para los estados normal y
+     * seleccionado, y asocia el botón al panel de selección especificado.
+     *
+     * @param panelSelect el panel de tipo {@code PanelSeleccionar} al que se asociará este botón.
      */
     public BotonCocacola(PanelSeleccionar panelSelect) {
         super("Precio: $1000");
