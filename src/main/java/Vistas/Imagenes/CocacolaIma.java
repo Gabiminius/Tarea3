@@ -33,7 +33,7 @@ public class CocacolaIma extends JPanel {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(imagen, 0, 10, this);
+        g.drawImage(imagen, 0, 3, this);
     }
 
 }
