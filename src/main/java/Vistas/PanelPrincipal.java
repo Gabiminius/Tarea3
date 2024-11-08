@@ -5,20 +5,38 @@ import java.awt.*;
 
 
 public class PanelPrincipal extends JPanel {
-    public PanelComprador com;
-    public PanelExpendedor exp;
+    private PanelComprador com;
+    private PanelExpendedor exp;
+    private BotonCompra botonComprar;
+
+    /**
+     * Constructor de la clase PanelPrincipal.
+     */
     public PanelPrincipal () {
-        exp = new PanelExpendedor ();
-        com = new PanelComprador();
-        this.setBackground(Color.gray);
+        this.com = new PanelComprador();
+        this.exp = new PanelExpendedor (5);
+        this.botonComprar = new BotonCompra(exp,com);
+        this.setBackground(Color.black);
+
+        add(exp);
+        add(botonComprar, BorderLayout.CENTER);
+        add(com);
+        setLayout(new FlowLayout());
     }
-    public void paintComponent (Graphics g) { //todo se dibuja a partir de este método
-        super.paintComponent(g); //llama al método pint al que hace override en la super clase
-//el de la super clase solo pinta el fondo (background)
-        com.paintComponent(g); //llama al metodo paintComponent definido en el PanelComprador
-        exp.paintComponent(g); //llama al metodo paintComponent definido en el PanelExpendedor
+
+    /**
+     * Método que se encarga de pintar los componentes del panel.
+     * @param g
+     */
+    @Override
+    protected void paintComponent (Graphics g) {
+        super.paintComponent(g);
     }
-}
+    }
+
+
+
+
 
 
 

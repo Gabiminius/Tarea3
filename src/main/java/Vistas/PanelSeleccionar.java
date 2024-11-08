@@ -37,6 +37,7 @@ public class PanelSeleccionar extends JPanel {
         add(boton3);
         add(boton4);
         add(boton5);
+        setBackground(Color.WHITE);
 
     }
 
