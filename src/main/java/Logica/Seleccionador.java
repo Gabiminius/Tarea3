@@ -6,25 +6,25 @@ package Logica;
  * de posición y un precio asociado.
  */
 public enum Seleccionador {
-    COCACOLA(1200){
+    COCACOLA(1000){
         @Override
         public Producto crearProducto(int serie){
             return new Cocacola(serie);
         }
     },
-    FANTA(1200){
+    FANTA(1000){
         @Override
         public Producto crearProducto(int serie){
             return new Fanta(serie);
         }
     },
-    SPRITE(1200){
+    SPRITE(1000){
         @Override
         public Producto crearProducto(int serie){
             return new Sprite(serie);
         }
     },
-    SNICKERS(1500){
+    SNICKERS(500){
         @Override
         public Producto crearProducto(int serie){
             return new Snickers(serie);

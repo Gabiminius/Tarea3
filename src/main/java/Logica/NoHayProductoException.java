@@ -1,5 +1,5 @@
 package Logica;
-class NoHayProductoException extends Exception{
+public class NoHayProductoException extends Exception{
     /**
      * @param errorMessage Un mensaje especificando el problema
      */

@@ -14,7 +14,6 @@ public class Expendedor {
     private Deposito <Producto> fanta;
     private Deposito <Producto> snickers;
     private Deposito <Producto> super8;
-    private Deposito <Producto> alfajores;
     private ArrayList<Deposito<Producto>> depositos;
     private Deposito<Moneda> monedaPago;
     private Deposito<Moneda> monedaVuelto;
@@ -33,17 +32,14 @@ public class Expendedor {
         fanta = new Deposito<>();
         snickers = new Deposito<>();
         super8 = new Deposito<>();
-        alfajores = new Deposito<>();
         depositos = new ArrayList<>();
         monedaPago = new Deposito<>();
         monedaVuelto = new Deposito<>();
-
         depositos.add(coca);
         depositos.add(sprite);
         depositos.add(fanta);
         depositos.add(snickers);
         depositos.add(super8);
-        depositos.add(alfajores);
 
         for(Seleccionador p : Seleccionador.values()){
             for(int i = 0; i < size; i++){

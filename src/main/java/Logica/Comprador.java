@@ -7,9 +7,7 @@ import java.util.ArrayList;
  * @author Valentina Serón
  * @version version 2, 03 de octubre 2024
  * */
-
-
-class Comprador {
+public class Comprador {
     private String sonido;
     private int vuelto = 0;
     private ArrayList<Moneda> monedas = new ArrayList<>();
