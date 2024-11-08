@@ -1,9 +1,14 @@
 package Logica;
 
 /**
- * Enumeración {@code Seleccionador} que representa una lista de productos disponibles
- * en el expendedor, incluyendo bebidas y dulces. Cada producto tiene un número
- * de posición y un precio asociado.
+ * Enumeración {@code Seleccionador} que define los diferentes productos disponibles
+ * en el expendedor, incluyendo tipos de bebidas y dulces. Cada producto en la enumeración
+ * tiene un precio fijo asociado y un método para crear instancias de dicho producto
+ * a partir de un número de serie.
+ *
+ * <p>Cada constante en {@code Seleccionador} representa un tipo de producto y
+ * permite la creación de dicho producto con un número de serie específico usando
+ * el método {@code crearProducto}.
  */
 public enum Seleccionador {
     COCACOLA(1000){
