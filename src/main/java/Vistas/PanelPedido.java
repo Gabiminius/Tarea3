@@ -23,23 +23,28 @@ public class PanelPedido extends JPanel {
     public PanelPedido() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS)); // Configuración de diseño vertical
 
-        JLabel label = new JLabel("Tus Compras:");
-        label.setFont(new Font("Arial", Font.BOLD, 15)); // Título estilizado
+        JLabel label = new JLabel("    Tus Compras:");
+        label.setFont(new Font("Arial", Font.BOLD, 20)); // Título estilizado
         label.setAlignmentX(Component.CENTER_ALIGNMENT); // Centrado en el panel
-
-        cuantasCocacolas = new JLabel("Cocacola: 0");
+        label.setForeground(Color.white);
+        cuantasCocacolas = new JLabel("    Cocacola: 0");
         cuantasSprites = new JLabel("Sprite: 0");
         cuantasFantas = new JLabel("Fanta: 0");
-        cuantosSnickers = new JLabel("Snickers: 0");
-        cuantosSuper8s = new JLabel("Super8: 0");
+        cuantosSnickers = new JLabel("    Snickers: 0");
+        cuantosSuper8s = new JLabel("  Super8: 0");
 
         // Estilizar los textos de productos
-        Font fontProducto = new Font("Arial", Font.PLAIN, 14);
+        Font fontProducto = new Font("Arial", Font.ITALIC, 20);
         cuantasCocacolas.setFont(fontProducto);
         cuantasSprites.setFont(fontProducto);
         cuantasFantas.setFont(fontProducto);
         cuantosSnickers.setFont(fontProducto);
         cuantosSuper8s.setFont(fontProducto);
+        cuantasCocacolas.setForeground(Color.RED);   // Cambia el color de la Coca-Cola a rojo
+        cuantasSprites.setForeground(Color.GREEN);   // Cambia el color de Sprite a verde
+        cuantasFantas.setForeground(Color.ORANGE);   // Cambia el color de Fanta a naranja
+        cuantosSnickers.setForeground(Color.MAGENTA); // Cambia el color de Snickers a magenta
+        cuantosSuper8s.setForeground(Color.PINK);
 
         // Alinear todos los elementos al centro
         cuantasCocacolas.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -57,7 +62,7 @@ public class PanelPedido extends JPanel {
         add(cuantasFantas);
         add(cuantosSnickers);
         add(cuantosSuper8s);
-        setBackground(Color.WHITE); // Fondo blanco del panel
+        setBackground(Color.black); // Fondo blanco del panel
     }
 
     /**
@@ -68,7 +73,7 @@ public class PanelPedido extends JPanel {
     public void addProducto(Producto producto) {
         if (producto instanceof Cocacola) {
             cantidadCocacolas++;
-            cuantasCocacolas.setText("Cocacola: " + cantidadCocacolas);
+            cuantasCocacolas.setText("  Cocacola: " + cantidadCocacolas);
         } else if (producto instanceof Sprite) {
             cantidadSprites++;
             cuantasSprites.setText("Sprite: " + cantidadSprites);
@@ -77,7 +82,7 @@ public class PanelPedido extends JPanel {
             cuantasFantas.setText("Fanta: " + cantidadFantas);
         } else if (producto instanceof Snickers) {
             cantidadSnickers++;
-            cuantosSnickers.setText("Snickers: " + cantidadSnickers);
+            cuantosSnickers.setText("  Snickers: " + cantidadSnickers);
         } else if (producto instanceof Super8) {
             cantidadSuper8s++;
             cuantosSuper8s.setText("Super8: " + cantidadSuper8s);
